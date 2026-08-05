@@ -1,7 +1,15 @@
 aid: petal
 name: Petal
-description: 'Petal is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Petal is a New York-based consumer fintech that issues Visa credit cards
+  aimed at people with limited or no credit history, underwriting applicants from their
+  bank-account cash flow (its proprietary CashScore metric) rather than a traditional
+  credit score alone. Its Petal 1, Petal 1 Rise and Petal 2 cards are issued by WebBank,
+  and the business is now part of the Tilt family of consumer finance brands (Tilt Card,
+  Inc., NMLS #2295169). Petal reaches customers through iOS and Android apps plus a web
+  dashboard and help center. It is a direct-to-consumer card issuer: as of this profile
+  it operates no developer program, publishes no API documentation, and exposes no
+  machine-readable API contract on any of its public hosts.'
+image: https://cdn.prod.website-files.com/636a6f81a287f5628189d717/6377fffaa265e3a2b2945444_petal-og%20(1).jpg
 url: https://raw.githubusercontent.com/api-evangelist/petal/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +20,12 @@ created: '2026-08-05'
 modified: '2026-08-05'
 tags:
 - Company
+- Financial Services
+- Fintech
+- Credit Cards
+- Consumer Finance
+- Credit Building
+- Lending
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +33,47 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/petal-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/petal_stock/
+  url: https://www.petalcard.com/
+- type: Blog
+  url: https://www.petalcard.com/blog
+- type: Support
+  url: https://support.petalcard.com/
+- type: TermsOfService
+  url: https://tilt.com/terms/
+- type: PrivacyPolicy
+  url: https://tilt.com/privacy/
+- type: LLMsTxt
+  url: llms/petal-llms.txt
+x-enrichment:
+  date: '2026-08-05'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Petal is a direct-to-consumer Visa card issuer whose only integration surface is the
+    private nginx origin behind its mobile apps at api.petalcard.com, which serves a bare
+    404 at every documented-spec path and is not accompanied by any developer portal,
+    reference or SDK.
+  evidence:
+    - url: https://api.petalcard.com/openapi.json
+      status: 404
+    - url: https://www.petalcard.com/developers
+      status: 404
+    - url: https://developers.petalcard.com/
+      status: 0
+    - url: https://www.petalcard.com/llms.txt
+      status: 404
+    - url: https://www.petalcard.com/sitemap.xml
+      status: 200
+  checked: '2026-08-05'
+x-secondary-market-listing: https://forgeglobal.com/petal_stock/
+x-note-no-signup-pointer: 'registration.petalcard.com and dashboard.petalcard.com are
+  CONSUMER cardholder application/account surfaces, not developer credential issuance;
+  no SignUp/Login pointer is emitted so the rating is not credited a self-service
+  developer sign-up that does not exist.'
