@@ -9,6 +9,17 @@ description: 'Petal is a New York-based consumer fintech that issues Visa credit
   dashboard and help center. It is a direct-to-consumer card issuer: as of this profile
   it operates no developer program, publishes no API documentation, and exposes no
   machine-readable API contract on any of its public hosts.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/636a6f81a287f5628189d717/6377fffaa265e3a2b2945444_petal-og%20(1).jpg
 url: https://raw.githubusercontent.com/api-evangelist/petal/refs/heads/main/apis.yml
 x-type: company
