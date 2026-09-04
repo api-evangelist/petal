@@ -20,6 +20,18 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://cdn.prod.website-files.com/636a6f81a287f5628189d717/6377fffaa265e3a2b2945444_petal-og%20(1).jpg
 url: https://raw.githubusercontent.com/api-evangelist/petal/refs/heads/main/apis.yml
 x-type: company
